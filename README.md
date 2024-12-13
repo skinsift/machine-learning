@@ -7,7 +7,7 @@ From this project, we developed a model to detect skin types. These detection re
 <p align="justify">
 To enhance dataset diversity, we performed image data augmentation using ImageDataGenerator. The dataset is divided into three subsets: training, validation, and test. All images are normalized or rescaled by dividing each pixel value by 255, ensuring the values fall within the range [0,1]. We addressed class imbalance by calculating class weights using compute_class_weight.
 
-We applied transfer learning using the MobileNetV2 model pretrained on ImageNet. Several additional layers were added, including `Conv2D`, `BatchNormalization`, `GlobalAveragePooling2D`, and a Dense output layer with 4 classes using softmax activation.
+We applied transfer learning using the MobileNetV2 model pre-trained on ImageNet. Several additional layers were added, including `Conv2D`, `BatchNormalization`, `GlobalAveragePooling2D`, and a Dense output layer with 4 classes using softmax activation.
 
 The optimizer used is Nadam, with a loss function of `sparse_categorical_crossentropy` and accuracy as the metric. The training process employed the early stopping callback, which stops training when validation loss does not improve for 5 consecutive epochs. Additionally, a learning rate scheduler was implemented to reduce the learning rate if the validation loss stagnates for 3 epochs. After training the model, here is what we obtained:</p>
 
@@ -22,7 +22,7 @@ The optimizer used is Nadam, with a loss function of `sparse_categorical_crossen
 ![image](https://github.com/user-attachments/assets/996859bd-516e-45e4-9f50-950aaa882f57)
 
 <p align="justify">
-After the last epoch, the training accuracy was 92.26%, and the validation accuracy was 84.57%. Meanwhile, the test accuracy reached 93.03%. Although the accuracy is quite high, the graph indicates that the model's performance may be suboptimal, which could be attributed to the relatively small dataset size. Based on the F1-score, we achieved an accuracy of 87%. While it may not be exceedingly high (above 90%), we are satisfied with the model as it performs well in predicting skin types on actual images that users might input. The model is saved in two formats: .h5 and .tflite, and we decided to use .tflite. We have tested both formats and found that using .tflite can be significantly faster. Additionally, .tflite is well-suited for platforms like mobile devices.</p>
+After the last epoch, the training accuracy was 92.26%, and the validation accuracy was 84.57%. Meanwhile, the test accuracy reached 93.03%. Although the accuracy is quite high, the graph indicates that the model's performance may be suboptimal. Based on the F1 score, we achieved an accuracy of 87%. While it may not be exceedingly high (above 90%), we are still satisfied with the model as it performs well in predicting skin types on actual images that users might input. The model is saved in two formats: .h5 and .tflite, and we decided to use .tflite. We have tested both formats and found that using .tflite can be significantly faster. Additionally, .tflite is well-suited for platforms like mobile devices.</p>
 </p>
 
 ## Scraping

@@ -93,7 +93,7 @@ The data preprocessing steps can be found in 4 additional .ipynb files: ingredie
 
 ### Non Model - Pytesseract
 <p align="justify">
-It is important to note that the OCR used here is not a custom-built model. Pytesseract is an effective OCR, especially when combined with Levenshtein, which is why it was chosen over other open-source options. Pytesseract, in combination with Levenshtein distance, is used to read and match the detected ingredients with those in the dataset. Several specific rules are applied, such as a threshold of 1 and the use of keywords like "komposisi," "ingredient," and "ingredients." The text following these keywords is matched; if no keyword is found, matching begins from the start of the detected text.</p>
+It is important to note that the OCR used here is not a custom-built model. Pytesseract is an effective OCR, especially when combined with Levenshtein, which is why it was chosen over other open-source options. Pytesseract, in combination with Levenshtein distance, is used to read and match the detected ingredients with those in the dataset. Several specific rules are applied, such as a threshold of 1 and the use of keywords like "komposisi", "ingredient", and "ingredients" The text following these keywords is matched; if no keyword is found, matching begins from the start of the detected text.</p>
 
 ### Skin Type Detection Model
 <p align="justify">

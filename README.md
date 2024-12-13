@@ -22,7 +22,7 @@ The optimizer used is Nadam, with a loss function of `sparse_categorical_crossen
 ![image](https://github.com/user-attachments/assets/996859bd-516e-45e4-9f50-950aaa882f57)
 
 <p align="justify">
-The graph may indicate suboptimal model performance, which could be attributed to the relatively small dataset size. Based on the F1-score, we achieved an accuracy of 87%. While it may not be exceedingly high (above 90%), we are satisfied with the model as it performs well in predicting skin types on actual images that users might input. The model is saved in two formats: .h5 and .tflite, and we decided to use .tflite. We have tested both formats and found that using .tflite can be significantly faster. Additionally, .tflite is well-suited for platforms like mobile devices.</p>
+After the last epoch, the training accuracy was 92.26%, and the validation accuracy was 84.57%. Meanwhile, the test accuracy reached 93.03%. Although the accuracy is quite high, the graph indicates that the model's performance may be suboptimal, which could be attributed to the relatively small dataset size. Based on the F1-score, we achieved an accuracy of 87%. While it may not be exceedingly high (above 90%), we are satisfied with the model as it performs well in predicting skin types on actual images that users might input. The model is saved in two formats: .h5 and .tflite, and we decided to use .tflite. We have tested both formats and found that using .tflite can be significantly faster. Additionally, .tflite is well-suited for platforms like mobile devices.</p>
 </p>
 
 ## Scraping
@@ -43,6 +43,7 @@ The graph may indicate suboptimal model performance, which could be attributed t
 | Pandas       | 2.2.2   |
 | Scikit-learn | 1.5.2   |
 | Seaborn      | 0.13.2  |
+| Python       | 3.10.12 |
 
 ## Assessment
 | Library      | Version |
@@ -84,7 +85,7 @@ This folder contains several other subfolders, such as Clean Data, Photos, Raw D
 
 `Raw Data`: Contains raw or unprocessed data that has been collected.
 
-`Skin Type`: Contains skin type datasets to train the model.
+`Skin Type`: Contains skin type datasets to train the model (public dataset from kaggle).
 
 We collected approximately 26,000 data entries (before preprocessing) on skincare ingredient compositions by scraping the website: www.paulaschoice.com. The code used for scraping can be found in scraping_ingredient.ipynb. Skincare product data was collected manually without scraping, with a total of 233 products (after cleaning), from various sources, including names and brands from https://femaledaily.com/, descriptions, key ingredients, and product ingredients from https://incidecoder.com/, while product images were sourced from various other websites. Labels for the assessment were assigned manually, and the results can be found in ./Clean Data/product/product_asesmen.csv.
 

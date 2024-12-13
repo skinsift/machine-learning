@@ -56,7 +56,7 @@ After the last epoch, the training accuracy was 92.26%, and the validation accur
 ## OCR
 | Library      | Version |
 | ------------ | ------- |
-| pytesseract  | 0.3.13  |
+| Pytesseract  | 0.3.13  |
 | Pandas       | 2.2.3   |
 | Python       | 3.11.1  |
 
